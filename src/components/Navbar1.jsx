@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { useTranslation } from 'react-i18next'; // Importar useTranslation
+import flagEs from '../assets/esp.jpg'; // Importar bandera español
+import flagEn from '../assets/eng.jpg'; // Importar bandera inglés
+import flagPt from '../assets/port.jpg'; // Importar bandera portugués
+import flagIt from '../assets/ita.jpg'; // Importar bandera italiano
+import flagDe from '../assets/ale.jpg'; // Importar bandera alemán
 
 const Navbar = () => {
   const { t, i18n } = useTranslation(); // Inicializar useTranslation
@@ -14,6 +19,24 @@ const Navbar = () => {
   // Función para cambiar el idioma
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
+  };
+
+  // Obteniendo la URL de la bandera actual
+  const getFlag = () => {
+    switch (i18n.language) {
+      case 'es':
+        return flagEs;
+      case 'en':
+        return flagEn;
+      case 'pt':
+        return flagPt;
+      case 'it':
+        return flagIt;
+      case 'de':
+        return flagDe;
+      default:
+        return flagEs; // Bandera por defecto
+    }
   };
 
   return (
@@ -47,13 +70,16 @@ const Navbar = () => {
           <Link to="/contacto" className="hover:text-blue-400">{t('Contacto')}</Link>
 
           {/* Selector de idiomas */}
-          <select onChange={(e) => changeLanguage(e.target.value)} className="border p-1 rounded">
-            <option value="es">Español</option>
-            <option value="en">English</option>
-            <option value="pt">Português</option>
-            <option value="it">Italiano</option>
-            <option value="de">Deutsch</option>
-          </select>
+          <div className="flex items-center">
+            <img src={getFlag()} alt="Flag" className="h-6 w-6 mr-2" />
+            <select onChange={(e) => changeLanguage(e.target.value)} className="border p-1 rounded">
+              <option value="es">Español</option>
+              <option value="en">English</option>
+              <option value="pt">Português</option>
+              <option value="it">Italiano</option>
+              <option value="de">Deutsch</option>
+            </select>
+          </div>
         </div>
       </div>
 
