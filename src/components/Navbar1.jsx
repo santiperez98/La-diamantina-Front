@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 p-4 text-white">
+    <nav className="bg-[#f7ebcc] p-4 text-[#96765e]">
       <div className="flex justify-between items-center">
         {/* Imagen Logo que redirige al Home */}
         <Link to="/" className="block">
@@ -22,7 +22,7 @@ const Navbar = () => {
 
         {/* Hamburguesa */}
         <button
-          className="text-white block md:hidden"
+          className="text-black block md:hidden"
           onClick={toggleMenu}
         >
           {/* Icono de menú hamburguesa */}

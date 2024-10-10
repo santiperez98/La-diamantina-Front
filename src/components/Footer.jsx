@@ -4,9 +4,9 @@ import { faEnvelope, faPhone, faBuilding, faInfoCircle } from '@fortawesome/free
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import logo from '../assets/logo.png'
 
-const Footer1 = () => {
+const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8 mt-10">
+    <footer className="bg-[#96765e] text-white py-8 mt-10">
       <div className="max-w-6xl mx-auto px-4">
         {/* Sección superior */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-6">
@@ -16,16 +16,16 @@ const Footer1 = () => {
             className="h-16 mb-4 md:mb-0"
           />
           <div className="flex space-x-8">
-            <a href="/mina" className="hover:text-blue-400 flex items-center">
+            <a href="/mina" className="hover:text-black flex items-center">
               <FontAwesomeIcon icon={faBuilding} className="mr-2" /> La Mina
             </a>
-            <a href="/empresa" className="hover:text-blue-400 flex items-center">
+            <a href="/empresa" className="hover:text-black flex items-center">
               <FontAwesomeIcon icon={faBuilding} className="mr-2" /> La Empresa
             </a>
-            <a href="/contacto" className="hover:text-blue-400 flex items-center">
+            <a href="/contacto" className="hover:text-black flex items-center">
               <FontAwesomeIcon icon={faEnvelope} className="mr-2" /> Contacto
             </a>
-            <a href="/about" className="hover:text-blue-400 flex items-center">
+            <a href="/about" className="hover:text-black flex items-center">
               <FontAwesomeIcon icon={faInfoCircle} className="mr-2" /> Acerca de Mí
             </a>
           </div>
@@ -35,10 +35,10 @@ const Footer1 = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm flex items-center">
             Contacto:
-            <a href="mailto:info@ladiamantina.com" className="text-blue-400 hover:underline ml-2 flex items-center">
+            <a href="mailto:info@ladiamantina.com" className="text-black hover:underline ml-2 flex items-center">
               <FontAwesomeIcon icon={faEnvelope} className="mr-1" /> info@ladiamantina.com
             </a>
-            <a href="https://wa.me/your_whatsapp_number" className="text-blue-400 hover:underline ml-4 flex items-center">
+            <a href="https://wa.me/your_whatsapp_number" className="text-black hover:underline ml-4 flex items-center">
               <FontAwesomeIcon icon={faWhatsapp} className="mr-1" /> WhatsApp
             </a>
           </p>
@@ -51,4 +51,4 @@ const Footer1 = () => {
   );
 };
 
-export default Footer1;
+export default Footer;
