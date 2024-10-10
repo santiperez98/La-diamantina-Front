@@ -7,7 +7,7 @@ import Mina from './Mina';
 import Empresa from './Empresa';
 import Contacto from './Contacto';
 import Footer from './components/Footer';
-
+import './i18n'; 
 
 const App = () => {
   return (
