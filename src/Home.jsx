@@ -1,20 +1,25 @@
 // src/pages/Home.jsx
 import React from 'react';
-import Carousel from './components/Carousel';
-import InfoSection from './components/InfoSection';
-import PurchaseSteps from './components/PurchaseSteps';
-import ContactCTA from './components/ContactCTA';
+import { Link } from 'react-router-dom'; // Asegúrate de importar Link aquí
+
 import CustomerReviews from './components/CustomerReviews';
-import Navbar from './components/Navbar1';
+import Carousel from './components/Carousel';
+import TraditionSection from './components/TraditionSection';
+import AboutCompany from './components/AboutCompany';
+import PurchaseAndContact from './components/PurchaseAndContact';
+
 
 const Home = () => {
   return (
-    <div>
-      
-      <Carousel />
-      <InfoSection />
-      <PurchaseSteps />
-      <ContactCTA />
+    <div className="min-h-screen flex flex-col items-center bg-gray-100">
+     
+     <Carousel />
+
+
+      <TraditionSection />
+      <AboutCompany />
+      <PurchaseAndContact />
+
       <CustomerReviews />
     </div>
   );
