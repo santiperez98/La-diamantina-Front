@@ -4,7 +4,7 @@ import { faEnvelope, faPhone, faBuilding, faInfoCircle } from '@fortawesome/free
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import logo from '../assets/logo.png'
 
-const Footer = () => {
+const Footer1 = () => {
   return (
     <footer className="bg-gray-800 text-white py-8 mt-10">
       <div className="max-w-6xl mx-auto px-4">
@@ -51,4 +51,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer1;

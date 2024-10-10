@@ -6,7 +6,7 @@ import Products from './Products';
 import Mina from './Mina';
 import Empresa from './Empresa';
 import Contacto from './Contacto';
-import Footer from './Components/Footer';
+import Footer1 from './Components/Footer1';
 
 
 const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/contacto" element={<Contacto />} />
 
       </Routes>
-      <Footer />
+      <Footer1 />
     </Router>
   );
 };
