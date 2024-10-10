@@ -6,8 +6,8 @@ import Products from './Products';
 import Mina from './Mina';
 import Empresa from './Empresa';
 import Contacto from './Contacto';
+import Footer from './Components/Footer';
 
-import Footer from './components/Footer';
 
 const App = () => {
   return (
