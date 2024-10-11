@@ -1,74 +1,155 @@
 import React, { useState } from 'react';
-
 import ProductCard from './components/ProductCard';
+import Cart from './components/Cart';
+
+// Datos de productos con múltiples opciones
+const productsData = [
+  {
+    name: 'Cuadrilongas',
+    image: 'https://acdn.mitiendanube.com/stores/002/173/831/products/1690988763152-d532c0842508fca88616995393466117-640-0.jpg',
+    options: [
+      { size: '30x7x5 cm', color: 'Gris', price: 16.81 },
+      { size: '30x7x5 cm', color: 'Amarilla', price: 30.43 },
+      { size: '25x7x5 cm', color: 'Gris', price: 14.35 },
+      { size: '25x7x5 cm', color: 'Amarilla', price: 24.34 },
+      { size: '20x7x5 cm', color: 'Gris', price: 11.77 },
+      { size: '20x7x5 cm', color: 'Amarilla', price: 14.78 },
+    ],
+  },
+  {
+    name: 'Doble Faz',
+    image: 'https://acdn.mitiendanube.com/stores/002/173/831/products/1690988763152-d532c0842508fca88616995393466117-640-0.jpg',
+    options: [
+      { size: '22x4x5 cm', price: 15.46 },
+      { size: '20x4x5 cm', price: 13.84 },
+      { size: '18x4x5 cm', price: 11.34 },
+      { size: '16x4x5 cm', price: 9.71 },
+    ],
+  },
+  // Agrega más productos según sea necesario
+];
 
 const Products = () => {
+  const [cartItems, setCartItems] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
-  const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
 
-  const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
+  // Función para agregar productos al carrito
+  const addToCart = (product, selectedOption, quantity) => {
+    const existingProductIndex = cartItems.findIndex(item => 
+      item.name === product.name && 
+      item.size === selectedOption.size && 
+      item.color === selectedOption.color
+    );
+
+    if (existingProductIndex !== -1) {
+      const updatedCartItems = [...cartItems];
+      updatedCartItems[existingProductIndex].quantity += quantity;
+      setCartItems(updatedCartItems);
+    } else {
+      setCartItems(prevItems => [
+        ...prevItems, 
+        { ...product, ...selectedOption, quantity }
+      ]);
+    }
+    setIsCartOpen(true); // Mostrar carrito cuando se agrega un producto
   };
 
-  const handleMinPriceChange = (e) => {
-    setMinPrice(e.target.value);
+  // Función para limpiar el carrito
+  const clearCart = () => {
+    setCartItems([]);
   };
 
-  const handleMaxPriceChange = (e) => {
-    setMaxPrice(e.target.value);
+  // Funciones para manejar cantidades
+  const incrementQuantity = (index) => {
+    const updatedCartItems = [...cartItems];
+    updatedCartItems[index].quantity += 1;
+    setCartItems(updatedCartItems);
   };
+
+  const decrementQuantity = (index) => {
+    const updatedCartItems = [...cartItems];
+    if (updatedCartItems[index].quantity > 1) {
+      updatedCartItems[index].quantity -= 1;
+      setCartItems(updatedCartItems);
+    }
+  };
+
+  // Filtrar productos
+  const filteredProducts = productsData.filter(product =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+    product.options.some(option => maxPrice ? option.price <= maxPrice : true)
+  );
+
+  // Calcular el total
+  const total = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="relative bg-gray-100 min-h-screen">
+      <header className="flex justify-between items-center bg-[#96765e] p-4">
+        <h1 className="text-white text-2xl">Productos</h1>
+        <button 
+          onClick={() => setIsCartOpen(!isCartOpen)} 
+          className="bg-white text-blue-600 px-4 py-2 rounded shadow-lg"
+        >
+          Carrito ({cartItems.length})
+        </button>
+      </header>
 
-
-      <div className="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-4 gap-8">
-        {/* Filtros a la izquierda */}
-        <div className="bg-white p-4 rounded-lg shadow-md">
-          <h2 className="text-xl font-semibold mb-4">Filtros</h2>
-
-          {/* Buscador */}
-          <div className="mb-4">
-            <input
-              type="text"
-              placeholder="Buscar producto..."
-              value={searchTerm}
-              onChange={handleSearch}
-              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
-          </div>
-
-          {/* Filtro por precio */}
-          <div className="mb-4">
-            <h3 className="text-lg font-semibold">Filtrar por precio</h3>
-            <div className="flex flex-col space-y-2">
-              <input
-                type="number"
-                placeholder="Precio mínimo"
-                value={minPrice}
-                onChange={handleMinPriceChange}
-                className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-              />
-              <input
-                type="number"
-                placeholder="Precio máximo"
-                value={maxPrice}
-                onChange={handleMaxPriceChange}
-                className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-              />
-            </div>
-          </div>
+      <div className="flex">
+        {/* Filtro de búsqueda y precio */}
+        <div className="w-1/4 p-4 bg-white shadow-md">
+          <h2 className="text-lg font-semibold mb-2">Filtros</h2>
+          <input 
+            type="text" 
+            placeholder="Buscar producto..." 
+            value={searchTerm} 
+            onChange={(e) => setSearchTerm(e.target.value)} 
+            className="border p-2 rounded w-full mb-4"
+          />
+          <input 
+            type="number" 
+            placeholder="Filtrar por precio máximo..." 
+            value={maxPrice} 
+            onChange={(e) => setMaxPrice(e.target.value)} 
+            className="border p-2 rounded w-full mb-4"
+          />
         </div>
 
-        {/* Productos en la parte central */}
-        <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          {/* Puedes mapear aquí los productos desde un array */}
+        {/* Listado de productos */}
+        <div className="flex-1 p-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {filteredProducts.map((product, index) => (
+              <ProductCard 
+                key={index} 
+                product={product} 
+                addToCart={addToCart} 
+              />
+            ))}
+          </div>
         </div>
       </div>
+
+      {/* Botón de carrito flotante */}
+      <button 
+        onClick={() => setIsCartOpen(!isCartOpen)} 
+        className="fixed bottom-4 right-4 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700"
+      >
+        Carrito ({cartItems.length})
+      </button>
+
+      {/* Carrito */}
+      {isCartOpen && (
+        <Cart 
+          cartItems={cartItems} 
+          total={total} 
+          onClose={() => setIsCartOpen(false)}
+          incrementQuantity={incrementQuantity}
+          decrementQuantity={decrementQuantity}
+          clearCart={clearCart}
+        />
+      )}
     </div>
   );
 };
