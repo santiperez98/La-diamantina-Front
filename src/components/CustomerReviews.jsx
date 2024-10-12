@@ -4,32 +4,32 @@ const reviews = [
   {
     text: "“Excelente producto, fui atendido por su dueño, persona muy atenta al momento de la visita.”",
     author: "Ricardo Guzman",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjXJh_pfKnJpe9vpk0wpI1rIp_neKa0pt75mTbXcrVOn_c-XSk3R=w60-h60-p-rp-mo-ba3-br100",
   },
   {
     text: "“Las mejores piedras para afilar naturales provenientes de una de las pocas canteras del mundo.”",
     author: "José Manuel Seoane",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjXshJfLyNDAqpIfSTjV1SzHIN0IN7VLRkSmVb7MuIs1_X1VpLBgOQ=w60-h60-p-rp-mo-ba6-br100",
   },
   {
     text: "“Muy buenas piedras para afilar. Debieran tener un distribuidor en Chile.”",
     author: "Francisco Edwards",
-    image: "https://randomuser.me/api/portraits/men/64.jpg",
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjW15_SmceW47O15QcRcuR5IM_c3GeuDQFWzyEv6OMbeHRXc0co=w60-h60-p-rp-mo-ba4-br100",
   },
   {
     text: "“Las mejores piedras de afilar sin dudas.”",
     author: "Javier Gonzalez",
-    image: "https://randomuser.me/api/portraits/women/24.jpg",
+    image: "https://lh3.googleusercontent.com/a/ACg8ocJjKdTOrkSXDG5bjkgU9MtzL0tLdpEJTGjiKq-egJt-oG5__w=w60-h60-p-rp-mo-ba3-br100",
   },
   {
     text: "“Excelentes piedras, excelente la atención, Elvio un maestro 🙏.”",
     author: "Arturo Gerosa",
-    image: "https://randomuser.me/api/portraits/men/56.jpg",
+    image: "https://lh3.googleusercontent.com/a/ACg8ocK2sfi9ckj9SOHG_yXKjo1hg89bjefO6ytQ7o-ot8BiPhsS5w=w60-h60-p-rp-mo-br100",
   },
   {
     text: "“Excelente atención.”",
     author: "Alfredo Luis Lodi",
-    image: "https://randomuser.me/api/portraits/women/77.jpg",
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjXsArz3J-5pLzzlhFj_F2URU4W4j2VQiZHSbVhqH4F6bflXqVg5Aw=w60-h60-p-rp-mo-ba5-br100",
   },
 ];
 

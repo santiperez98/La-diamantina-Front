@@ -66,7 +66,7 @@ const Cart = ({ cartItems, total, onClose, incrementQuantity, decrementQuantity,
           className="w-full mt-4 bg-green-500 text-white py-2 rounded hover:bg-green-600" 
           onClick={handleWhatsAppMessage}
         >
-          Enviar a WhatsApp
+          Comprar
         </button>
         <button 
           className="w-full mt-2 bg-red-500 text-white py-2 rounded hover:bg-red-600" 

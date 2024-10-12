@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ProductCard from './components/ProductCard';
 import Cart from './components/Cart';
+import { FaInfoCircle } from 'react-icons/fa'; // Asegúrate de instalar react-icons
 
 // Datos de productos con múltiples opciones
 const productsData = [
@@ -115,6 +116,20 @@ const Products = () => {
             onChange={(e) => setMaxPrice(e.target.value)} 
             className="border p-2 rounded w-full mb-4"
           />
+                {/* Información de granulometría */}
+      <div className="mt-4 p-4 border border-gray-300 rounded bg-white shadow-md">
+        <div className="flex items-center">
+          <FaInfoCircle className="text-gray-500 mr-2" />
+          <h2 className="text-lg font-semibold">Información de Granulometría</h2>
+        </div>
+        <p className="mt-2">
+          En la mina se encuentran dos tipos de piedras:
+          <br />
+          <span className="font-semibold text-yellow-600">Piedra Amarilla:</span> Granulometría de 550 grid.
+          <br />
+          <span className="font-semibold text-gray-600">Piedra Gris:</span> Granulometría de 700 - 1000 grid.
+        </p>
+      </div>
         </div>
 
         {/* Listado de productos */}
@@ -130,6 +145,8 @@ const Products = () => {
           </div>
         </div>
       </div>
+
+
 
       {/* Botón de carrito flotante */}
       <button 

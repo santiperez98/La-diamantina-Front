@@ -20,7 +20,7 @@ const ProductCard = ({ product, addToCart }) => {
       <img 
         src={product.image} 
         alt={product.name} 
-        className="w-full h-40 object-contain mb-4 rounded-md" 
+        className="w-full h-52 object-contain mb-4 rounded-md" // Ajusta la altura aquí
       />
       <h3 className="text-lg font-semibold">{product.name}</h3>
 

@@ -64,11 +64,11 @@ const Contacto = () => {
         <div className="flex flex-col items-center space-y-4">
           <div className="flex items-center">
             <FontAwesomeIcon icon={faEnvelope} className="text-[#c2ac93] text-2xl mr-4" />
-            <a href="mailto:tuemail@example.com" className="text-lg">tuemail@example.com</a>
+            <a href="mailto:tuemail@example.com" className="text-lg">contactos@ladiamantina.com.ar / ventas@ladiamantina.com.ar</a>
           </div>
           <div className="flex items-center">
             <FontAwesomeIcon icon={faComments} className="text-[#c2ac93] text-2xl mr-4" />
-            <a href="https://wa.me/549XXXXXXXXX" className="text-lg">WhatsApp: +54 9 11 1234-5678</a>
+            <a href="https://wa.me/549XXXXXXXXX" className="text-lg">WhatsApp: +54 9 2604580315</a>
           </div>
           <div className="flex items-center">
             <FontAwesomeIcon icon={faMapMarkerAlt} className="text-[#c2ac93] text-2xl mr-4" />

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { useInView } from 'react-intersection-observer';
 import imagen1 from './assets/slide1.jpg';
-import imagen2 from './assets/slide2.jpg';
+import imagen2 from './assets/slide3.jpg';
 
 const Mina = () => {
   const { ref: titleRef, inView: titleInView } = useInView({ threshold: 0.1 });
@@ -27,7 +27,7 @@ const Mina = () => {
         ref={textRef}
         className={`text-lg mb-4 transition-opacity duration-700 delay-100 ${textInView ? 'opacity-100' : 'opacity-0'}`}
       >
-        La mina La Diamantina es la única concesión minera de piedras de afilar
+        La mina La Diamantina es una de las concesiónes mineras de piedras de afilar
         argentina otorgada por la Dirección General de Minería de la Nación.
       </p>
 

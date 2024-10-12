@@ -1,17 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next'; // Importar useTranslation
+import { useSwipeable } from 'react-swipeable'; // Importar useSwipeable
+
+// Importar las imágenes localmente
+import img1 from '../assets/slide4.jpg';
+import img2 from '../assets/slide2.jpg';
+import img3 from '../assets/slide1.jpg';
 
 const images = [
   { 
-    src: 'https://www.ladiamantina.com.ar/uploads/slides/b4e3ad1474a3ceecb2535f7bee087ab00e755163.jpg', 
+    src: img1, 
     key: 'Calidad Insuperable'
   },
   { 
-    src: 'https://www.ladiamantina.com.ar/uploads/slides/8a503854f3422ecfd01313720085b956401916ec.jpg', 
+    src: img2, 
     key: 'Innovación en Cada Detalle'
   },
   { 
-    src: 'https://www.ladiamantina.com.ar/uploads/slides/6433454e0030334f466aa87132fbc632a779bdfb.jpg', 
+    src: img3, 
     key: 'Experiencia y Compromiso'
   },
 ];
@@ -28,12 +34,24 @@ const Carousel = () => {
     return () => clearInterval(interval); // Limpia el intervalo al desmontar el componente
   }, []);
 
-  const goToSlide = (index) => {
-    setCurrentIndex(index);
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
+  // Usar useSwipeable para detectar el swipe a izquierda o derecha
+  const handlers = useSwipeable({
+    onSwipedLeft: () => nextSlide(),
+    onSwipedRight: () => prevSlide(),
+    preventDefaultTouchmoveEvent: true, // Evitar el desplazamiento del navegador
+    trackMouse: true, // Habilitar también para dispositivos que usen mouse
+  });
+
   return (
-    <div className="relative w-full overflow-hidden">
+    <div {...handlers} className="relative w-full overflow-hidden">
       <div className="flex transition-transform duration-300 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {images.map((image, index) => (
           <div key={index} className="w-full flex-shrink-0 relative">
@@ -55,7 +73,7 @@ const Carousel = () => {
           <button
             key={index}
             className={`w-3 h-3 rounded-full ${currentIndex === index ? 'bg-[#96765e]' : 'bg-gray-300'} transition-colors duration-300`}
-            onClick={() => goToSlide(index)}
+            onClick={() => setCurrentIndex(index)}
           />
         ))}
       </div>
