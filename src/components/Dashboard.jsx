@@ -1,331 +1,177 @@
-import React, { useState } from 'react'
+'use client'
+
 import {
-    Flex,
-    Heading,
-    Avatar,
-    AvatarGroup,
-    Text,
-    Icon,
-    IconButton,
-    Table,
-    Thead,
-    Tbody,
-    SimpleGrid,
-    Tr,
-    Th,
-    Td,
-    Divider,
-    Link,
-    Box,
-    Button,
-    Input,
-    InputGroup,
-    InputLeftElement
-} from '@chakra-ui/react'
-import {
-    FiHome,
-    FiPieChart,
-    FiDollarSign,
-    FiBox,
-    FiCalendar,
-    FiChevronDown,
-    FiChevronUp,
-    FiChevronLeft,
-    FiChevronRight,
-    FiTrendingUp,
-    FiCompass,
-    FiStar,
-    FiSettings,
-    FiMenu,
-} from "react-icons/fi"
+  Box,
+  Heading,
+  Image,
+  Text,
+  Divider,
+  HStack,
+  Tag,
+  Container,
+  Button,
+  useColorModeValue,
+  VStack,
+} from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
 
+const BlogTags = ({ tags }) => {
+  return (
+    <HStack spacing={2}>
+      {tags.map((tag) => (
+        <Tag size={'md'} variant="solid" colorScheme="orange" key={tag}>
+          {tag}
+        </Tag>
+      ))}
+    </HStack>
+  );
+};
 
-export default function Dashboard() {
-    const [display, changeDisplay] = useState('hide')
-    const [value, changeValue] = useState(1)
-    const [itemsPerPage] = useState(3); // Elementos por página
-    const [currentPage, setCurrentPage] = useState(1)
+const BlogAuthor = ({ date, name }) => {
+  return (
+    <HStack marginTop="2" spacing="2" alignItems="center">
+      <Image
+        borderRadius="full"
+        boxSize="40px"
+        src="https://100k-faces.glitch.me/random-image"
+        alt={`Avatar of ${name}`}
+      />
+      <Text fontWeight="medium">{name}</Text>
+      <Text>—</Text>
+      <Text>{date.toLocaleDateString()}</Text>
+    </HStack>
+  );
+};
 
-    const LinkItems = [
-        { name: 'Home', icon: FiHome },
-        { name: 'Trending', icon: FiTrendingUp },
-        { name: 'Explore', icon: FiCompass },
-        { name: 'Favourites', icon: FiStar },
-        { name: 'Settings', icon: FiSettings },
-    ];
+const ArticleList = () => {
+  const [products, setProducts] = useState([]);
+  console.log(products);
+  
+  const [currentPage, setCurrentPage] = useState(0);
+  const productsPerPage = 2; // Número de productos por página
+  const totalPages = Math.ceil(products.length / productsPerPage);
 
+  // Función para obtener productos
+  const fetchProducts = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/Productos'); // Cambia esto según tu API
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      setProducts(data);
+    } catch (error) {
+      console.error('Error fetching products:', error);
+    }
+  };
 
-    const NavItem = ({ icon, children, ...rest }) => {
-        return (
-            <Box
-                as="a"
-                href="#"
-                style={{ textDecoration: 'none' }}
-                _focus={{ boxShadow: 'none' }}>
-                <Flex
-                    align="center"
-                    p="4"
-                    mx="4"
-                    borderRadius="lg"
-                    role="group"
-                    cursor="pointer"
-                    _hover={{
-                        bg: 'cyan.400',
-                        color: 'white',
-                    }}
-                    {...rest}>
-                    {icon && (
-                        <Icon
-                            mr="4"
-                            fontSize="16"
-                            _groupHover={{
-                                color: 'white',
-                            }}
-                            as={icon}
-                        />
-                    )}
-                    {children}
-                </Flex>
-            </Box>
-        );
-    };
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
-    const transactions = [
-        {
-            id: 1,
-            name: "Amazon",
-            category: "Electronic Devices",
-            cashback: "+$2",
-            amount: "-$242",
-            date: "Apr 24, 2021 at 1:40pm",
-            avatar: "amazon.jpeg"
-        },
-        {
-            id: 2,
-            name: "Starbucks",
-            category: "Cafe and restaurant",
-            cashback: "+$23",
-            amount: "-$32",
-            date: "Apr 22, 2021 at 2:43pm",
-            avatar: "starbucks.png"
-        },
-        {
-            id: 3,
-            name: "YouTube",
-            category: "Social Media",
-            cashback: "+$4",
-            amount: "-$112",
-            date: "Apr 13, 2021 at 11:23am",
-            avatar: "youtube.png"
-        },
-        {
-            id: 4,
-            name: "Amazon",
-            category: "Electronic Devices",
-            cashback: "+$2",
-            amount: "-$242",
-            date: "Apr 12, 2021 at 9:40pm",
-            avatar: "amazon.jpeg"
-        },
-        {
-            id: 5,
-            name: "Starbucks",
-            category: "Cafe and restaurant",
-            cashback: "+$23",
-            amount: "-$32",
-            date: "Apr 10, 2021 at 2:10pm",
-            avatar: "starbucks.png"
-        },
-        {
-            id: 6,
-            name: "YouTube",
-            category: "Social Media",
-            cashback: "+$4",
-            amount: "-$112",
-            date: "Apr 7, 2021 at 9:03am",
-            avatar: "youtube.png"
-        }
-    ];
+  const handleNextPage = () => {
+    if (currentPage < totalPages - 1) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
+  };
 
-    // Calcular el índice de los primeros y últimos elementos de la página
-    const indexOfLastItem = currentPage * itemsPerPage;
-    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentItems = transactions.slice(indexOfFirstItem, indexOfLastItem); // Datos de la página actual
-    const totalPages = Math.ceil(transactions.length / itemsPerPage);
-    const currentTransactions = transactions.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+  const handlePrevPage = () => {
+    if (currentPage > 0) {
+      setCurrentPage((prevPage) => prevPage - 1);
+    }
+  };
 
-    // Cambiar de página
-    const nextPage = () => {
-        if (currentPage < Math.ceil(transactions.length / itemsPerPage)) {
-            setCurrentPage(prev => prev + 1);
-        }
-    };
+  const startIndex = currentPage * productsPerPage;
+  const currentProducts = products.slice(startIndex, startIndex + productsPerPage);
 
-    const prevPage = () => {
-        if (currentPage > 1) {
-            setCurrentPage(prev => prev - 1);
-        }
-    };
+  return (
+    <Container maxW={'7xl'} p="12">
+      <Heading as="h1" mb="6">Product List</Heading>
 
-    return (
-        <Flex
-            h={[null, null, "90vh"]}
-            maxW="2000px"
-            flexDir={["column", "column", "row"]}
-            overflow="hidden"
+      {currentProducts.map((product, index) => (
+        <Box
+          key={index}
+          marginTop={{ base: '1', sm: '5' }}
+          display="flex"
+          flexDirection={{ base: 'column', sm: 'row' }}
+          justifyContent="space-between"
         >
-            {/* Column 1 */}
-            <Flex
-                w={["100%", "100%", "10%", "15%", "15%"]}
-                flexDir="column"
-                alignItems="center"
-                backgroundColor="#020202"
-                color="#fff"
+          <Box
+            display="flex"
+            flex="1"
+            marginRight="3"
+            position="relative"
+            alignItems="center"
+          >
+            <Box
+              width={{ base: '100%', sm: '85%' }}
+              zIndex="2"
+              marginLeft={{ base: '0', sm: '5%' }}
+              marginTop="5%"
             >
-                <Flex
-                    flexDir="column"
-                    h={[null, null, "100vh"]}
-                    justifyContent="space-between"
-
-                >
-
-                    <Heading
-                        mt={50}
-                        mb={[25, 50, 100]}
-                        fontSize={["4xl", "4xl", "2xl", "3xl", "4xl",]}
-                        alignSelf="center"
-                        letterSpacing="tight"
-                    >
-                        Rise.
-                    </Heading>
-
-                    <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]}>
-                        <SimpleGrid columns={1} spacing={5}>
-                            {LinkItems.map((link) => (
-                                <NavItem key={link.name} icon={link.icon}>
-                                    {link.name}
-                                </NavItem>
-
-                            ))}
-
-                        </SimpleGrid>
-
-                    </Flex>
-                    <Flex flexDir="column" alignItems="center" mb={10} mt={5}>
-                        <Avatar my={2} src="avatar-1.jpg" />
-                        <Text textAlign="center">Calvin West</Text>
-                    </Flex>
-                </Flex>
-            </Flex>
-
-            {/* PASGINAION */}
-            <Flex
-                w={["100%", "100%", "60%", "60%", "55%", "90%"]}
-                p="2%"
-                flexDir="column"
-                overflow="auto"
-                minH="100vh"
+              <Image
+                borderRadius="lg"
+                src={product.imagenUrl} // URL de la imagen
+                alt={product.nombre}
+                objectFit="contain"
+              />
+            </Box>
+          </Box>
+          <Box
+            display="flex"
+            flex="1"
+            flexDirection="column"
+            justifyContent="center"
+            marginTop={{ base: '3', sm: '0' }}
+          >
+            <BlogTags tags={product.tags || []} /> {/* Si hay tags */}
+            <Heading marginTop="1">{product.nombre}</Heading>
+            <Text
+              as="p"
+              marginTop="2"
+              color={useColorModeValue('gray.700', 'gray.200')}
+              fontSize="lg"
             >
-                <Heading
-                    fontWeight="normal"
-                    mb={4}
-                    letterSpacing="tight"
-                >
-                    Welcome back, <Flex display="inline-flex" fontWeight="bold">Calvin</Flex>
-                </Heading>
+              {product.descripcion}
+            </Text>
 
-                <Flex justifyContent="space-between" mt={4}>
-                    <Flex align="flex-end">
-                        <Heading as="h2" size="lg" letterSpacing="tight">Productos</Heading>
-                        <Text fontSize="small" color="gray" ml={4}>Apr 2021</Text>
-                    </Flex>
-                    <IconButton icon={<FiCalendar />} />
-                </Flex>
-                <Flex flexDir="column">
-                    <Flex overflow="auto">
-                        <Table variant="unstyled" mt={4}>
-                            <Thead>
-                                <Tr color="gray">
-                                    <Th>Name of transaction</Th>
-                                    <Th>Category</Th>
-                                    <Th isNumeric>Cashback</Th>
-                                    <Th isNumeric>Amount</Th>
-                                </Tr>
-                            </Thead>
-                            <Tbody>
-                                {currentTransactions.map(transaction => (
-                                    <Tr key={transaction.id}>
-                                        <Td>
-                                            <Flex align="center">
-                                                <Avatar size="sm" mr={2} src={transaction.avatar} />
-                                                <Flex flexDir="column">
-                                                    <Heading size="sm" letterSpacing="tight">{transaction.name}</Heading>
-                                                    <Text fontSize="sm" color="gray">{transaction.date}</Text>
-                                                </Flex>
-                                            </Flex>
-                                        </Td>
-                                        <Td>{transaction.category}</Td>
-                                        <Td isNumeric>{transaction.cashback}</Td>
-                                        <Td isNumeric><Text fontWeight="bold" display="inline-table">{transaction.amount}.00</Text></Td>
-                                    </Tr>
-                                ))}
-                                {display === 'show' && (
-                                    currentTransactions.map(transaction => (
-                                        <Tr key={transaction.id}>
-                                            <Td>
-                                                <Flex align="center">
-                                                    <Avatar size="sm" mr={2} src={transaction.avatar} />
-                                                    <Flex flexDir="column">
-                                                        <Heading size="sm" letterSpacing="tight">{transaction.name}</Heading>
-                                                        <Text fontSize="sm" color="gray">{transaction.date}</Text>
-                                                    </Flex>
-                                                </Flex>
-                                            </Td>
-                                            <Td>{transaction.category}</Td>
-                                            <Td isNumeric>{transaction.cashback}</Td>
-                                            <Td isNumeric><Text fontWeight="bold" display="inline-table">{transaction.amount}.00</Text></Td>
-                                        </Tr>
-                                    ))
-                                )}
-                            </Tbody>
-                        </Table>
-                    </Flex>
+            {/* Mostrar producto con variaciones */}
+            {product.Variacions ? (
+              <VStack align="start" marginTop="3">
+                {product.Variacions.map((variacion, idx) => (
+                  <Box key={idx} borderWidth="1px" borderRadius="lg" p="4" width="100%">
+                    <Text><strong>Color:</strong> {variacion.color}</Text>
+                    <Text><strong>Tamaño:</strong> {variacion.tamaño}</Text>
+                    <Text><strong>Precio:</strong> ${variacion.precio}</Text>
+                    <Text><strong>Stock:</strong> {variacion.stock}</Text>
+                  </Box>
+                ))}
+              </VStack>
+            ) : (
+              // Mostrar producto sin variaciones
+              <Box marginTop="3">
+                <Text><strong>Precio:</strong> ${product.precio}</Text>
+                <Text><strong>Stock:</strong> {product.stock}</Text>
+              </Box>
+            )}
 
-                    {/* Controles de paginación */}
-                    <Flex justifyContent="space-between" mt={4}>
-                        <IconButton
-                            icon={<FiChevronLeft />}
-                            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-                            isDisabled={currentPage === 1}
-                        />
-                        <Text>
-                            Page {currentPage} of {totalPages}
-                        </Text>
-                        <IconButton
-                            icon={<FiChevronRight />}
-                            onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
-                            isDisabled={currentPage === totalPages}
-                        />
-                    </Flex>
-                </Flex>
+            <BlogAuthor name="Author Name" date={new Date()} /> {/* Cambia según tus necesidades */}
+          </Box>
+        </Box>
+      ))}
 
-                <Flex align="center">
-                    <Divider />
-                    <IconButton
-                        icon={display == 'show' ? <FiChevronUp /> : <FiChevronDown />}
-                        onClick={() => {
-                            if (display == 'show') {
-                                changeDisplay('none')
-                            } else {
-                                changeDisplay('show')
-                            }
-                        }}
-                    />
-                    <Divider />
-                </Flex>
-            </Flex>
-        </Flex>
+      <HStack spacing={4} marginTop="5" justifyContent="center">
+        <Button onClick={handlePrevPage} isDisabled={currentPage === 0}>
+          {'<'} Anterior
+        </Button>
+        <Button onClick={handleNextPage} isDisabled={currentPage === totalPages - 1}>
+          Siguiente {'>'}
+        </Button>
+      </HStack>
 
+      <Divider marginTop="5" />
+    </Container>
+  );
+};
 
-    )
-}
+export default ArticleList;
