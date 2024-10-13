@@ -1,10 +1,10 @@
 // src/pages/Empresa.jsx
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBuilding, faClock, faIndustry } from '@fortawesome/free-solid-svg-icons';
+import { faBuilding, faClock, faIndustry, faInfoCircle, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { useInView } from 'react-intersection-observer';
 import imagenEmpresa from './assets/logo.png'; // Cambia esta ruta a tu imagen
-import imagenPlanta from './assets/slide3.jpg'; // Cambia esta ruta a tu imagen
+import imagenPlanta from './assets/slide2.jpg'; // Cambia esta ruta a tu imagen
 
 const Empresa = () => {
   // Creando las referencias de Intersection Observer
@@ -12,7 +12,7 @@ const Empresa = () => {
   const { ref: descRef, inView: descInView } = useInView({ threshold: 0.1 });
   const { ref: imgRef1, inView: imgInView1 } = useInView({ threshold: 0.1 });
   const { ref: plantRef, inView: plantInView } = useInView({ threshold: 0.1 });
-  const { ref: timelineRef, inView: timelineInView } = useInView({ threshold: 0.1 });
+  const { ref: fundRef, inView: fundInView } = useInView({ threshold: 0.1 });
 
   return (
     <div className="max-w-6xl mx-auto p-4">
@@ -81,26 +81,23 @@ const Empresa = () => {
         calidad que permiten ofrecer garantía de fabricación al usuario.
       </p>
 
-      <h2 className="text-2xl font-bold my-4">Línea de Tiempo</h2>
-      <div ref={timelineRef} className={`transition-opacity duration-700 ${timelineInView ? 'opacity-100' : 'opacity-0'}`}>
-        <div className="flex flex-col space-y-4">
-          <div className="flex items-center">
-            <FontAwesomeIcon icon={faClock} className="text-[#c2ac93] text-2xl mr-4" />
-            <p className="text-lg">1942: Fundación de LA DIAMANTINA por José Pérez.</p>
-          </div>
-          <div className="flex items-center">
-            <FontAwesomeIcon icon={faIndustry} className="text-[#c2ac93] text-2xl mr-4" />
-            <p className="text-lg">1960: Inicio de la explotación del yacimiento propio.</p>
-          </div>
-          <div className="flex items-center">
-            <FontAwesomeIcon icon={faBuilding} className="text-[#c2ac93] text-2xl mr-4" />
-            <p className="text-lg">1982: Segunda generación toma el control de la empresa.</p>
-          </div>
-          <div className="flex items-center">
-            <FontAwesomeIcon icon={faBuilding} className="text-[#c2ac93] text-2xl mr-4" />
-            <p className="text-lg">2024: Continúa con dedicación a la actividad minera.</p>
-          </div>
+      {/* Sección de Fundación */}
+      <h2 className="text-2xl font-bold my-4">Fundación de la Empresa</h2>
+      <div
+        ref={fundRef}
+        className={`border border-gray-300 rounded-lg p-4 bg-gray-100 shadow-lg transition-opacity duration-700 ${fundInView ? 'opacity-100' : 'opacity-0'}`}
+      >
+        <div className="flex items-center mb-4">
+          <FontAwesomeIcon icon={faInfoCircle} className="text-[#c2ac93] text-3xl mr-3" />
+          <h3 className="text-xl font-bold">Historia</h3>
         </div>
+        <p className="text-lg mb-4">
+          LA DIAMANTINA fue fundada en 1942 por José Pérez, quien visionó la posibilidad de extraer y manufacturar piedras de afilar de alta calidad. Desde sus inicios, la empresa se ha enfocado en la innovación y en mantener altos estándares de calidad en sus productos. Con el pasar de los años, la empresa ha sido liderada por su familia, continuando con el legado de dedicación y compromiso que estableció su fundador.
+        </p>
+        <p className="text-lg mb-4">
+          <FontAwesomeIcon icon={faChevronRight} className="text-[#c2ac93] mr-2" />
+          Visita nuestra sección de productos para ver la variedad que ofrecemos.
+        </p>
       </div>
     </div>
   );
