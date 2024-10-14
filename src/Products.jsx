@@ -5,6 +5,17 @@ import { FaInfoCircle } from 'react-icons/fa'; // Asegúrate de instalar react-i
 
 // Datos de productos con múltiples opciones
 const productsData = [
+
+  {
+    name: 'Petit Cuadrilongas',
+    image: 'https://acdn.mitiendanube.com/stores/002/173/831/products/1690988763152-d532c0842508fca88616995393466117-640-0.jpg',
+    options: [
+      { size: '30x5x5 cm', color: 'Gris', price: 14 },
+      { size: '25x5x5 cm', color: 'Amarilla', price: 15 },
+      { size: '25x5x5 cm', color: 'Gris', price: 12 },
+      { size: '20x5x5 cm', color: 'Gris', price: 10 },
+    ],
+  },
   {
     name: 'Cuadrilongas',
     image: 'https://acdn.mitiendanube.com/stores/002/173/831/products/1690988763152-d532c0842508fca88616995393466117-640-0.jpg',
@@ -18,16 +29,83 @@ const productsData = [
     ],
   },
   {
-    name: 'Doble Faz',
+    name: 'Tijeras Poda',
     image: 'https://acdn.mitiendanube.com/stores/002/173/831/products/1690988763152-d532c0842508fca88616995393466117-640-0.jpg',
     options: [
-      { size: '22x4x5 cm', price: 15.46 },
-      { size: '20x4x5 cm', price: 13.84 },
-      { size: '18x4x5 cm', price: 11.34 },
-      { size: '16x4x5 cm', price: 9.71 },
+      { size: '6x2,5x2,5 cm', price: 1 },
     ],
   },
-  // Agrega más productos según sea necesario
+  {
+    name: 'Tacos Pulir',
+    image: 'https://acdn.mitiendanube.com/stores/002/173/831/products/1690988763152-d532c0842508fca88616995393466117-640-0.jpg',
+    options: [
+      { size: '5x5x3 cm', price: 1.50 },
+      { size: '5x7x5 cm', price: 2 },
+    ],
+  },
+  {
+    name: 'Bloques 1 cara',
+    image: 'https://acdn.mitiendanube.com/stores/002/173/831/products/1690988763152-d532c0842508fca88616995393466117-640-0.jpg',
+    options: [
+      { size: '1 kg', price: 2.63 },
+    ],
+  },
+  {
+    name: 'Bloques 2 caras',
+    image: 'https://acdn.mitiendanube.com/stores/002/173/831/products/1690988763152-d532c0842508fca88616995393466117-640-0.jpg',
+    options: [
+      { size: '1 kg', price: 3.68 },
+    ],
+  },
+  {
+    name: 'Hogas',
+    image: 'https://acdn.mitiendanube.com/stores/002/173/831/products/1690988763152-d532c0842508fca88616995393466117-640-0.jpg',
+    options: [
+      { size: '20x3x5 cm', price: 7.50 },
+      { size: '18x3x5 cm', price: 6.50 },
+      { size: '16x3x5 cm', price: 6 },
+      { size: '15x5x5 cm', price: 5.50 },
+      { size: '14x3x5 cm', price: 5 },
+      { size: '12x3x5 cm', price: 4.50 },
+    ],
+  },
+  {
+    name: 'Petit Hogar',
+    image: 'https://acdn.mitiendanube.com/stores/002/173/831/products/1690988763152-d532c0842508fca88616995393466117-640-0.jpg',
+    options: [
+      { size: '20x2,5x5 cm', price: 6 },
+      { size: '18x2,5x5 cm', price: 5.50 },
+      { size: '16x2,5x5 cm', price: 5 },
+      { size: '14x2,5x5 cm', price: 4.50 },
+    ],
+  },
+  {
+    name: 'Hogar c/base MDF',
+    image: 'https://acdn.mitiendanube.com/stores/002/173/831/products/1690988763152-d532c0842508fca88616995393466117-640-0.jpg',
+    options: [
+      { size: '18 cm largo', price: 7.50 },
+      { size: '16 cm largo', price: 6.50 },
+      { size: '14 cm largo', price: 6 },
+      { size: '12 cm largo', price: 5 },
+    ],
+  },
+  {
+    name: 'Molejones',
+    image: 'https://acdn.mitiendanube.com/stores/002/173/831/products/1690988763152-d532c0842508fca88616995393466117-640-0.jpg',
+    options: [
+      { size: '20 cm espesor 5 cm', price: 75 },
+      { size: '19 cm espesor 5 cm', price: 70 },
+      { size: '18 cm espesor 5 cm', price: 65 },
+      { size: '16 cm espesor 5 cm', price: 55 },
+    ],
+  },
+  {
+    name: 'Guadañas',
+    image: 'https://acdn.mitiendanube.com/stores/002/173/831/products/1690988763152-d532c0842508fca88616995393466117-640-0.jpg',
+    options: [
+      { size: '25 cm largo', price: 8 },
+    ],
+  },
 ];
 
 const Products = () => {
