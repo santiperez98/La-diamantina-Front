@@ -97,4 +97,4 @@ estilo.innerHTML = `
 `;
 document.head.appendChild(estilo);
 
-export default CarruselComentariosClientes;
+export default CarruselComentariosClientes
