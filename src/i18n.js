@@ -43,8 +43,14 @@ const resources = {
       "Acerca de Mí": "About Me",
       "Contacto:": "Contact:",
       "WhatsApp": "WhatsApp",
-      "Todos los derechos reservados.": "All rights reserved."
-      // Añade aquí el resto de las traducciones
+      "Todos los derechos reservados.": "All rights reserved.",
+       "Comentarios de Clientes": "Customer Reviews",
+       "LA MINA": "THE MINE",
+       "La mina La Diamantina es una de las concesiónes mineras de piedras de afilar argentina otorgada por la Dirección General de Minería de la Nación": "The La Diamantina mine is one of the mining concessions for sharpening stones granted by the General Directorate of Mining of the Nation.",
+       "Se encuentra a 120 Km de la ciudad de San Rafael Mendoza Argentina, en el distrito minero Nº 11, con una superficie de 18 Has": "It is located 120 km from the city of San Rafael Mendoza Argentina, in mining district No. 11, with an area of 18 hectares.",
+       "Título de propiedad de Fojas 120 y 121, todo ello referido al expediente 4P-81, certificados Nº 60936 de Dirección General de Minería de la Nación": "Title of property from Pages 120 and 121, all related to file 4P-81, certificate No. 60936 from the General Directorate of Mining of the Nation.",
+        "Certificado de mensura y posesiones, al asiento 876, Folio 98 del Tomo 8 del registro de mensuras y posesiones": "Survey and possession certificate, to seat 876, Page 98 of Volume 8 of the survey and possession registry.",
+       // Añade aquí el resto de las traducciones
     }
   },
   pt: {
@@ -86,8 +92,8 @@ const resources = {
   "Acerca de Mí": "Sobre Mim",
   "Contacto:": "Contato:",
   "WhatsApp": "WhatsApp",
-  "Todos los derechos reservados.": "Todos os direitos reservados."
-      
+  "Todos los derechos reservados.": "Todos os direitos reservados.",
+       "Comentarios de Clientes": "Comentários dos Clientes"
       // Añade aquí el resto de las traducciones
     }
   },
@@ -130,8 +136,13 @@ const resources = {
         "Acerca de Mí": "Chi Sono",
         "Contacto:": "Contatto:",
         "WhatsApp": "WhatsApp",
-        "Todos los derechos reservados.": "Tutti i diritti riservati."
-      
+        "Todos los derechos reservados.": "Tutti i diritti riservati.",
+      "Comentarios de Clientes": "Recensioni dei Clienti",
+      "LA MINA": "LA MINE",
+      "La mina La Diamantina es una de las concesiónes mineras de piedras de afilar argentina otorgada por la Dirección General de Minería de la Nación": "La miniera La Diamantina è una delle concessioni minerarie per pietre da affilare concesse dalla Direzione Generale delle Miniere della Nazione.",
+      "Se encuentra a 120 Km de la ciudad de San Rafael Mendoza Argentina, en el distrito minero Nº 11, con una superficie de 18 Has": "Si trova a 120 km dalla città di San Rafael Mendoza Argentina, nel distretto minerario n. 11, con una superficie di 18 ettari.",
+      "Título de propiedad de Fojas 120 y 121, todo ello referido al expediente 4P-81, certificados Nº 60936 de Dirección General de Minería de la Nación": "Titolo di proprietà delle Pagine 120 e 121, tutto ciò riferito al fascicolo 4P-81, certificato n. 60936 della Direzione Generale delle Miniere della Nazione.",
+      "Certificado de mensura y posesiones, al asiento 876, Folio 98 del Tomo 8 del registro de mensuras y posesiones": "Certificato di misurazione e possedimenti, alla sede 876, Foglio 98 del Volume 8 del registro di misurazioni e possedimenti."
       
       // Añade aquí el resto de las traducciones
     }
@@ -175,8 +186,15 @@ const resources = {
         "Acerca de Mí": "Über Mich",
         "Contacto:": "Kontakt:",
         "WhatsApp": "WhatsApp",
-        "Todos los derechos reservados.": "Alle Rechte vorbehalten."
-      
+        "Todos los derechos reservados.": "Alle Rechte vorbehalten.",
+        "Comentarios de Clientes": "Kundenbewertungen",
+      "LA MINA": "DIE MINEN",
+      "La mina La Diamantina es una de las concesiónes mineras de piedras de afilar argentina otorgada por la Dirección General de Minería de la Nación": "Die La Diamantina Mine ist eine der Bergbaukonzessionen für Schleifsteine, die von der Generaldirektion für Bergbau der Nation vergeben wurde.",
+      "Se encuentra a 120 Km de la ciudad de San Rafael Mendoza Argentina, en el distrito minero Nº 11, con una superficie de 18 Has": "Sie befindet sich 120 km von der Stadt San Rafael Mendoza, Argentinien, im Bergbaugebiet Nr. 11, mit einer Fläche von 18 Hektar.",
+      "Título de propiedad de Fojas 120 y 121, todo ello referido al expediente 4P-81, certificados Nº 60936 de Dirección General de Minería de la Nación": "Eigentumstitel von Seiten 120 und 121, alles im Zusammenhang mit der Akte 4P-81, Zertifikat Nr. 60936 der Generaldirektion für Bergbau der Nation.",
+      "Certificado de mensura y posesiones, al asiento 876, Folio 98 del Tomo 8 del registro de mensuras y posesiones": "Vermessungs- und Besitzbescheinigung, für den Sitz 876, Blatt 98 des Bandes 8 des Vermessungs- und Besitzregisters."
+
+
       
       // Añade aquí el resto de las traducciones
     }
@@ -220,7 +238,14 @@ const resources = {
       "Acerca de Mí": "Acerca de Mí",
       "Contacto:": "Contacto:",
       "WhatsApp": "WhatsApp",
-      "Todos los derechos reservados.": "Todos los derechos reservados."
+      "Todos los derechos reservados.": "Todos los derechos reservados.",
+      "Comentarios de Clientes": "Comentarios de Clientes",
+      "LA MINA": "LA MINA",
+      "La mina La Diamantina es una de las concesiónes mineras de piedras de afilar argentina otorgada por la Dirección General de Minería de la Nación": "La mina La Diamantina es una de las concesiónes mineras de piedras de afilar argentina otorgada por la Dirección General de Minería de la Nación.",
+      "Se encuentra a 120 Km de la ciudad de San Rafael Mendoza Argentina, en el distrito minero Nº 11, con una superficie de 18 Has": "Se encuentra a 120 Km de la ciudad de San Rafael Mendoza Argentina, en el distrito minero Nº 11, con una superficie de 18 Has",
+      "Título de propiedad de Fojas 120 y 121, todo ello referido al expediente 4P-81, certificados Nº 60936 de Dirección General de Minería de la Nación": "Título de propiedad de Fojas 120 y 121, todo ello referido al expediente 4P-81, certificados Nº 60936 de Dirección General de Minería de la Nación",
+      "Certificado de mensura y posesiones, al asiento 876, Folio 98 del Tomo 8 del registro de mensuras y posesiones": "Certificado de mensura y posesiones, al asiento 876, Folio 98 del Tomo 8 del registro de mensuras y posesiones",
+      
       // Añade aquí el resto de las traducciones
     }
   },
