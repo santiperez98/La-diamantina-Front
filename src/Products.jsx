@@ -140,6 +140,13 @@ const Products = () => {
     setCartItems([]);
   };
 
+  // Función para eliminar un producto del carrito
+  const removeFromCart = (index) => {
+    const updatedCartItems = [...cartItems];
+    updatedCartItems.splice(index, 1); // Eliminar el producto del carrito
+    setCartItems(updatedCartItems);
+  };
+
   // Funciones para manejar cantidades
   const incrementQuantity = (index) => {
     const updatedCartItems = [...cartItems];
@@ -242,6 +249,7 @@ const Products = () => {
           incrementQuantity={incrementQuantity}
           decrementQuantity={decrementQuantity}
           clearCart={clearCart}
+          removeFromCart={removeFromCart} // Pasar la función para eliminar del carrito
         />
       )}
     </div>
