@@ -44,7 +44,7 @@ const BlogAuthor = ({ date, name }) => {
   );
 };
 
-const ArticleList = () => {
+const Dashboard = () => {
   const [products, setProducts] = useState([]);
   console.log(products);
   
@@ -177,4 +177,4 @@ const ArticleList = () => {
   );
 };
 
-export default ArticleList;
+export default Dashboard;
