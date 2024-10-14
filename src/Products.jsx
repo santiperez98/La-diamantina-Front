@@ -98,9 +98,9 @@ const Products = () => {
         </button>
       </header>
 
-      <div className="flex">
+      <div className="flex flex-col md:flex-row">
         {/* Filtro de búsqueda y precio */}
-        <div className="w-1/4 p-4 bg-white shadow-md">
+        <div className="w-full md:w-1/4 p-4 bg-white shadow-md">
           <h2 className="text-lg font-semibold mb-2">Filtros</h2>
           <input 
             type="text" 
@@ -116,25 +116,26 @@ const Products = () => {
             onChange={(e) => setMaxPrice(e.target.value)} 
             className="border p-2 rounded w-full mb-4"
           />
-                {/* Información de granulometría */}
-      <div className="mt-4 p-4 border border-gray-300 rounded bg-white shadow-md">
-        <div className="flex items-center">
-          <FaInfoCircle className="text-gray-500 mr-2" />
-          <h2 className="text-lg font-semibold">Información de Granulometría</h2>
-        </div>
-        <p className="mt-2">
-          En la mina se encuentran dos tipos de piedras:
-          <br />
-          <span className="font-semibold text-yellow-600">Piedra Amarilla:</span> Granulometría de 550 grid.
-          <br />
-          <span className="font-semibold text-gray-600">Piedra Gris:</span> Granulometría de 700 - 1000 grid.
-        </p>
-      </div>
+
+          {/* Información de granulometría */}
+          <div className="mt-4 p-4 border border-gray-300 rounded bg-white shadow-md">
+            <div className="flex items-center">
+              <FaInfoCircle className="text-gray-500 mr-2" />
+              <h2 className="text-lg font-semibold">Información de Granulometría</h2>
+            </div>
+            <p className="mt-2">
+              En la mina se encuentran dos tipos de piedras:
+              <br />
+              <span className="font-semibold text-yellow-600">Piedra Amarilla:</span> Granulometría de 550 grid.
+              <br />
+              <span className="font-semibold text-gray-600">Piedra Gris:</span> Granulometría de 700 - 1000 grid.
+            </p>
+          </div>
         </div>
 
         {/* Listado de productos */}
         <div className="flex-1 p-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProducts.map((product, index) => (
               <ProductCard 
                 key={index} 
@@ -145,8 +146,6 @@ const Products = () => {
           </div>
         </div>
       </div>
-
-
 
       {/* Botón de carrito flotante */}
       <button 
