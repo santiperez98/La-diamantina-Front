@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useTranslation } from 'react-i18next'; // Importar useTranslation
 const comentarios = [
   {
     texto: "“Excelente producto, fui atendido por su dueño, persona muy atenta al momento de la visita.”",
@@ -59,10 +59,11 @@ const CalificacionEstrellas = () => {
 };
 
 const CarruselComentariosClientes = () => {
+  const { t } = useTranslation(); // Inicializar useTranslation
   return (
     <div className="relative w-full overflow-hidden bg-gray-100 py-8">
       <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
-        Comentarios de Clientes
+        {t('Comentarios de Clientes')} 
       </h2>
       <div className="flex animate-scroll space-x-8">
         {[...comentarios, ...comentarios].map((comentario, index) => (

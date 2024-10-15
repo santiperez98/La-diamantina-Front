@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import {
   Box,
@@ -14,6 +14,7 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const BlogTags = ({ tags }) => {
   return (
@@ -43,7 +44,7 @@ const BlogAuthor = ({ date, name }) => {
   );
 };
 
-const ArticleList = () => {
+const Dashboard = () => {
   const [products, setProducts] = useState([]);
   console.log(products);
   
@@ -125,7 +126,9 @@ const ArticleList = () => {
             marginTop={{ base: '3', sm: '0' }}
           >
             <BlogTags tags={product.tags || []} /> {/* Si hay tags */}
-            <Heading marginTop="1">{product.nombre}</Heading>
+            <Heading marginTop="1">
+              <Link to={`/product/${product.id}`}>{product.nombre}</Link> {/* Enlace al detalle del producto */}
+            </Heading>
             <Text
               as="p"
               marginTop="2"
@@ -174,4 +177,4 @@ const ArticleList = () => {
   );
 };
 
-export default ArticleList;
+export default Dashboard;

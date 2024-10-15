@@ -4,14 +4,15 @@ const ProductCard = ({ product, addToCart }) => {
   const [selectedOption, setSelectedOption] = useState(product.options[0]);
   const [quantity, setQuantity] = useState(1);
 
+  // Función para manejar el cambio de opciones
   const handleOptionChange = (e) => {
-    const selectedValue = e.target.value;
-    const option = product.options.find(opt => opt.size === selectedValue || opt.color === selectedValue);
-    setSelectedOption(option);
+    const selectedIndex = parseInt(e.target.value, 10); // Usamos el índice como valor único
+    setSelectedOption(product.options[selectedIndex]); // Seleccionamos la opción correcta usando el índice
   };
 
+  // Función para manejar el cambio de cantidad
   const handleQuantityChange = (e) => {
-    const value = Math.max(1, parseInt(e.target.value));
+    const value = Math.max(1, parseInt(e.target.value, 10));
     setQuantity(value);
   };
 
@@ -20,7 +21,7 @@ const ProductCard = ({ product, addToCart }) => {
       <img 
         src={product.image} 
         alt={product.name} 
-        className="w-full h-52 object-contain mb-4 rounded-md" // Ajusta la altura aquí
+        className="w-full h-52 object-contain mb-4 rounded-md" 
       />
       <h3 className="text-lg font-semibold">{product.name}</h3>
 
@@ -31,9 +32,9 @@ const ProductCard = ({ product, addToCart }) => {
             <input 
               type="radio" 
               name={product.name} 
-              value={option.size} 
-              checked={selectedOption.size === option.size} 
-              onChange={handleOptionChange}
+              value={index} // Usamos el índice de la opción como valor único
+              checked={product.options[index] === selectedOption} // Verificamos si la opción seleccionada es la misma
+              onChange={handleOptionChange} 
             />
             {option.size} - {option.color ? option.color : 'N/A'} - ${option.price}
           </label>
