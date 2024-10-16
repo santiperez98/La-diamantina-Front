@@ -69,15 +69,15 @@ const Cart = ({ cartItems, total, onClose, incrementQuantity, decrementQuantity,
                     <p>{item.size} {item.color ? `(${item.color})` : ''}</p>
                     <p className="font-bold">${item.price} x {item.quantity}</p>
                     <div className="flex items-center gap-2 mt-2">
-                      <button 
-                        onClick={() => decrementQuantity(item.id)} 
-                        className="bg-gray-300 p-1 rounded"
-                      >-</button>
-                      <span>{item.quantity}</span>
-                      <button 
-                        onClick={() => incrementQuantity(item.id)} 
-                        className="bg-gray-300 p-1 rounded"
-                      >+</button>
+                    <button 
+  onClick={() => decrementQuantity(item.id)} 
+  className="bg-gray-300 p-1 rounded"
+>-</button>
+<span>{item.quantity}</span>
+<button 
+  onClick={() => incrementQuantity(item.id)} 
+  className="bg-gray-300 p-1 rounded"
+>+</button>
                     </div>
                   </div>
                   <img src={item.image} alt={item.name} className="w-16 h-16 object-cover rounded-md ml-4" />

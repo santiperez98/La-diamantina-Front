@@ -171,20 +171,27 @@ const Products = () => {
     setCartItems(updatedCartItems);
   };
 
-  // Funciones para manejar cantidades
-  const incrementQuantity = (index) => {
-    const updatedCartItems = [...cartItems];
-    updatedCartItems[index].quantity += 1;
-    setCartItems(updatedCartItems);
-  };
-
-  const decrementQuantity = (index) => {
-    const updatedCartItems = [...cartItems];
-    if (updatedCartItems[index].quantity > 1) {
-      updatedCartItems[index].quantity -= 1;
-      setCartItems(updatedCartItems);
+// Función para incrementar la cantidad de un producto
+const incrementQuantity = (id) => {
+  const updatedCartItems = cartItems.map(item => {
+    if (item.id === id) {
+      return { ...item, quantity: item.quantity + 1 };
     }
-  };
+    return item;
+  });
+  setCartItems(updatedCartItems);
+};
+
+// Función para decrementar la cantidad de un producto
+const decrementQuantity = (id) => {
+  const updatedCartItems = cartItems.map(item => {
+    if (item.id === id && item.quantity > 1) {
+      return { ...item, quantity: item.quantity - 1 };
+    }
+    return item;
+  });
+  setCartItems(updatedCartItems);
+};
 
   // Filtrar productos
   const filteredProducts = productsData.filter(product =>
