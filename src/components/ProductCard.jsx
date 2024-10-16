@@ -36,7 +36,7 @@ const ProductCard = ({ product, addToCart }) => {
               checked={product.options[index] === selectedOption} // Verificamos si la opción seleccionada es la misma
               onChange={handleOptionChange} 
             />
-            {option.size} - {option.color ? option.color : 'N/A'} - ${option.price}
+            {option.size} {option.color && `- ${option.color}`} - ${option.price}
           </label>
         ))}
       </div>
