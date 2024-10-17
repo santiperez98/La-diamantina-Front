@@ -18,11 +18,11 @@ const ProductCard = ({ product, addToCart }) => {
 
   return (
     <div className="bg-white border rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
-      <img 
-        src={product.image} 
-        alt={product.name} 
-        className="w-full h-52 object-contain mb-4 rounded-md" 
-      />
+<img 
+  src={product.image} 
+  alt={product.name} 
+  className="w-full h-64 max-h-64 object-cover mb-4 rounded-md" 
+/>
       <h3 className="text-lg font-semibold">{product.name}</h3>
 
       {/* Opciones de selección */}

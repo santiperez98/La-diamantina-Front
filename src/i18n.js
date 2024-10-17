@@ -46,11 +46,24 @@ const resources = {
       "Todos los derechos reservados.": "All rights reserved.",
        "Comentarios de Clientes": "Customer Reviews",
        "LA MINA": "THE MINE",
-       "La mina La Diamantina es una de las concesiónes mineras de piedras de afilar argentina otorgada por la Dirección General de Minería de la Nación": "The La Diamantina mine is one of the mining concessions for sharpening stones granted by the General Directorate of Mining of the Nation.",
-       "Se encuentra a 120 Km de la ciudad de San Rafael Mendoza Argentina, en el distrito minero Nº 11, con una superficie de 18 Has": "It is located 120 km from the city of San Rafael Mendoza Argentina, in mining district No. 11, with an area of 18 hectares.",
-       "Título de propiedad de Fojas 120 y 121, todo ello referido al expediente 4P-81, certificados Nº 60936 de Dirección General de Minería de la Nación": "Title of property from Pages 120 and 121, all related to file 4P-81, certificate No. 60936 from the General Directorate of Mining of the Nation.",
-        "Certificado de mensura y posesiones, al asiento 876, Folio 98 del Tomo 8 del registro de mensuras y posesiones": "Survey and possession certificate, to seat 876, Page 98 of Volume 8 of the survey and possession registry.",
-       // Añade aquí el resto de las traducciones
+       "La mina La Diamantina es una de las concesiónes mineras de piedras de afilar argentina otorgada por la Dirección General de Minería de la Nación.": "The La Diamantina mine is one of the mining concessions for sharpening stones granted by the General Directorate of Mining of the Nation.",
+       "Se encuentra a 120 Km de la ciudad de San Rafael Mendoza Argentina, en el distrito minero Nº 11, con una superficie de 18 Has.": "It is located 120 km from the city of San Rafael Mendoza Argentina, in mining district No. 11, with an area of 18 hectares.",
+       "Título de propiedad de Fojas 120 y 121, todo ello referido al expediente 4P-81, certificados Nº 60936 de Dirección General de Minería de la Nación.": "Title of property from Pages 120 and 121, all related to file 4P-81, certificate No. 60936 from the General Directorate of Mining of the Nation.",
+        "Certificado de mensura y posesiones, al asiento 876, Folio 98 del Tomo 8 del registro de mensuras y posesiones.": "Survey and possession certificate, to seat 876, Page 98 of Volume 8 of the survey and possession registry.",
+          "LA EMPRESA": "THE COMPANY",
+          "LA DIAMANTINA es una empresa familiar fundada por José Pérez y continuada por sus herederos, Miguel A. Pérez y Elbio Ramiro Pérez (Hijo y nieto de don José).": "LA DIAMANTINA is a family business founded by José Pérez and continued by his heirs, Miguel A. Pérez and Elbio Ramiro Pérez (Son and grandson of Mr. José).",
+          "El yacimiento propio explotado desde hace 82 años por su fundador es hoy producido por la familia, quien en forma continua hasta estos días y con dedicación exclusiva a esta actividad minera e industrial, extraen y manufacturan en planta industrial propia, desarrollando el ciclo completo de producción y venta de una completa línea de piedras de afilar de alta calidad al mejor precio.": "The proprietary mine exploited for 82 years by its founder is now run by the family, who continuously to this day and with exclusive dedication to this mining and industrial activity, extract and manufacture in their own industrial plant, developing the complete production and sales cycle of a full line of high-quality sharpening stones at the best price.",
+          "Planta Industrial": "Industrial Plant",
+          "Se encuentra en Ortiz de Rosas 1227 de San Rafael, Mendoza a 20 cuadras del km 0, cuenta con una superficie de 2.400 m2 en donde se procesa el mineral extraído de la mina LA DIAMANTINA.": "It is located at Ortiz de Rosas 1227 in San Rafael, Mendoza, 20 blocks from km 0, with an area of 2,400 m2 where the mineral extracted from the LA DIAMANTINA mine is processed.",
+          "El mineral es tratado, de acuerdo a su utilidad y destino, con seis tipos de cortadoras de discos diamantados y pulidoras de esmeril para una correcta terminación.": "The mineral is treated, according to its utility and purpose, with six types of diamond disc cutters and emery polishers for proper finishing.",
+          "La empresa cuenta con galpones de almacenamiento y línea de etiquetado, pasando en todas sus etapas de manufactura por estrictos controles de calidad que permiten ofrecer garantía de fabricación al usuario.": "The company has storage warehouses and a labeling line, and all stages of manufacturing go through strict quality controls that guarantee product reliability for the user.",
+          "Fundación de la Empresa": "Company Foundation",
+          "Historia": "History",
+          "LA DIAMANTINA fue fundada en 1942 por José Pérez, quien visionó la posibilidad de extraer y manufacturar piedras de afilar de alta calidad. Desde sus inicios, la empresa se ha enfocado en la innovación y en mantener altos estándares de calidad en sus productos. Con el pasar de los años, la empresa ha sido liderada por su familia, continuando con el legado de dedicación y compromiso que estableció su fundador.": "LA DIAMANTINA was founded in 1942 by José Pérez, who envisioned the possibility of extracting and manufacturing high-quality sharpening stones. From its beginnings, the company has focused on innovation and maintaining high quality standards in its products. Over the years, the company has been led by his family, continuing the legacy of dedication and commitment that its founder established.",
+          "Visita nuestra sección de productos para ver la variedad que ofrecemos.": "Visit our products section to see the variety we offer.",
+        
+       
+        // Añade aquí el resto de las traducciones
     }
   },
   pt: {
@@ -93,8 +106,25 @@ const resources = {
   "Contacto:": "Contato:",
   "WhatsApp": "WhatsApp",
   "Todos los derechos reservados.": "Todos os direitos reservados.",
-       "Comentarios de Clientes": "Comentários dos Clientes"
-      // Añade aquí el resto de las traducciones
+       "Comentarios de Clientes": "Comentários dos Clientes",
+       "LA MINA": "A MINA",
+       "La mina La Diamantina es una de las concesiónes mineras de piedras de afilar argentina otorgada por la Dirección General de Minería de la Nación.": "A mina La Diamantina é uma das concessões de mineração de pedras de afiar concedida pela Direção Geral de Mineração da Nação.",
+       "Se encuentra a 120 Km de la ciudad de San Rafael Mendoza Argentina, en el distrito minero Nº 11, con una superficie de 18 Has.": "Está localizada a 120 km da cidade de San Rafael Mendoza, Argentina, no distrito de mineração Nº 11, com uma área de 18 hectares.",
+       "Título de propiedad de Fojas 120 y 121, todo ello referido al expediente 4P-81, certificados Nº 60936 de Dirección General de Minería de la Nación.": "Título de propriedade das Folhas 120 e 121, tudo relacionado ao processo 4P-81, certificado Nº 60936 da Direção Geral de Mineração da Nação.",
+        "Certificado de mensura y posesiones, al asiento 876, Folio 98 del Tomo 8 del registro de mensuras y posesiones.": "Certificado de medição e posses, no assento 876, Folha 98 do Tomo 8 do registro de medições e posses.",
+        "LA EMPRESA": "A EMPRESA",
+        "LA DIAMANTINA es una empresa familiar fundada por José Pérez y continuada por sus herederos, Miguel A. Pérez y Elbio Ramiro Pérez (Hijo y nieto de don José).": "A LA DIAMANTINA é uma empresa familiar fundada por José Pérez e continuada por seus herdeiros, Miguel A. Pérez e Elbio Ramiro Pérez (Filho e neto de Don José).",
+        "El yacimiento propio explotado desde hace 82 años por su fundador es hoy producido por la familia, quien en forma continua hasta estos días y con dedicación exclusiva a esta actividad minera e industrial, extraen y manufacturan en planta industrial propia, desarrollando el ciclo completo de producción y venta de una completa línea de piedras de afilar de alta calidad al mejor precio.": "A mina própria explorada há 82 anos por seu fundador é hoje operada pela família, que continua até hoje com dedicação exclusiva a esta atividade de mineração e industrial, extraindo e fabricando em sua própria planta industrial, desenvolvendo o ciclo completo de produção e venda de uma linha completa de pedras de afiar de alta qualidade ao melhor preço.",
+        "Planta Industrial": "Planta Industrial",
+        "Se encuentra en Ortiz de Rosas 1227 de San Rafael, Mendoza a 20 cuadras del km 0, cuenta con una superficie de 2.400 m2 en donde se procesa el mineral extraído de la mina LA DIAMANTINA.": "Está localizada na Ortiz de Rosas 1227 em San Rafael, Mendoza, a 20 quadras do km 0, com uma área de 2.400 m2 onde o minério extraído da mina LA DIAMANTINA é processado.",
+        "El mineral es tratado, de acuerdo a su utilidad y destino, con seis tipos de cortadoras de discos diamantados y pulidoras de esmeril para una correcta terminación.": "O minério é tratado, de acordo com sua utilidade e destino, com seis tipos de cortadores de disco diamantados e polidoras de esmeril para um acabamento adequado.",
+        "La empresa cuenta con galpones de almacenamiento y línea de etiquetado, pasando en todas sus etapas de manufactura por estrictos controles de calidad que permiten ofrecer garantía de fabricación al usuario.": "A empresa possui armazéns de estocagem e linha de rotulagem, e todas as etapas de fabricação passam por rigorosos controles de qualidade que garantem confiabilidade ao usuário.",
+        "Fundación de la Empresa": "Fundação da Empresa",
+        "Historia": "História",
+        "LA DIAMANTINA fue fundada en 1942 por José Pérez, quien visionó la posibilidad de extraer y manufacturar piedras de afilar de alta calidad. Desde sus inicios, la empresa se ha enfocado en la innovación y en mantener altos estándares de calidad en sus productos. Con el pasar de los años, la empresa ha sido liderada por su familia, continuando con el legado de dedicación y compromiso que estableció su fundador.": "LA DIAMANTINA foi fundada em 1942 por José Pérez, que vislumbrou a possibilidade de extrair e fabricar pedras de afiar de alta qualidade. Desde o início, a empresa tem se concentrado na inovação e na manutenção de altos padrões de qualidade em seus produtos. Ao longo dos anos, a empresa tem sido liderada por sua família, continuando o legado de dedicação e compromisso que seu fundador estabeleceu.",
+        "Visita nuestra sección de productos para ver la variedad que ofrecemos.": "Visite nossa seção de produtos para ver a variedade que oferecemos.",
+
+        // Añade aquí el resto de las traducciones
     }
   },
   it: {
@@ -139,10 +169,22 @@ const resources = {
         "Todos los derechos reservados.": "Tutti i diritti riservati.",
       "Comentarios de Clientes": "Recensioni dei Clienti",
       "LA MINA": "LA MINE",
-      "La mina La Diamantina es una de las concesiónes mineras de piedras de afilar argentina otorgada por la Dirección General de Minería de la Nación": "La miniera La Diamantina è una delle concessioni minerarie per pietre da affilare concesse dalla Direzione Generale delle Miniere della Nazione.",
-      "Se encuentra a 120 Km de la ciudad de San Rafael Mendoza Argentina, en el distrito minero Nº 11, con una superficie de 18 Has": "Si trova a 120 km dalla città di San Rafael Mendoza Argentina, nel distretto minerario n. 11, con una superficie di 18 ettari.",
-      "Título de propiedad de Fojas 120 y 121, todo ello referido al expediente 4P-81, certificados Nº 60936 de Dirección General de Minería de la Nación": "Titolo di proprietà delle Pagine 120 e 121, tutto ciò riferito al fascicolo 4P-81, certificato n. 60936 della Direzione Generale delle Miniere della Nazione.",
-      "Certificado de mensura y posesiones, al asiento 876, Folio 98 del Tomo 8 del registro de mensuras y posesiones": "Certificato di misurazione e possedimenti, alla sede 876, Foglio 98 del Volume 8 del registro di misurazioni e possedimenti."
+      "La mina La Diamantina es una de las concesiónes mineras de piedras de afilar argentina otorgada por la Dirección General de Minería de la Nación.": "La miniera La Diamantina è una delle concessioni minerarie per pietre da affilare concesse dalla Direzione Generale delle Miniere della Nazione.",
+      "Se encuentra a 120 Km de la ciudad de San Rafael Mendoza Argentina, en el distrito minero Nº 11, con una superficie de 18 Has.": "Si trova a 120 km dalla città di San Rafael Mendoza Argentina, nel distretto minerario n. 11, con una superficie di 18 ettari.",
+      "Título de propiedad de Fojas 120 y 121, todo ello referido al expediente 4P-81, certificados Nº 60936 de Dirección General de Minería de la Nación.": "Titolo di proprietà delle Pagine 120 e 121, tutto ciò riferito al fascicolo 4P-81, certificato n. 60936 della Direzione Generale delle Miniere della Nazione.",
+      "Certificado de mensura y posesiones, al asiento 876, Folio 98 del Tomo 8 del registro de mensuras y posesiones.": "Certificato di misurazione e possedimenti, alla sede 876, Foglio 98 del Volume 8 del registro di misurazioni e possedimenti.",
+        "LA EMPRESA": "L'AZIENDA",
+        "LA DIAMANTINA es una empresa familiar fundada por José Pérez y continuada por sus herederos, Miguel A. Pérez y Elbio Ramiro Pérez (Hijo y nieto de don José).": "LA DIAMANTINA è un'azienda familiare fondata da José Pérez e continuata dai suoi eredi, Miguel A. Pérez e Elbio Ramiro Pérez (Figlio e nipote di Don José).",
+        "El yacimiento propio explotado desde hace 82 años por su fundador es hoy producido por la familia, quien en forma continua hasta estos días y con dedicación exclusiva a esta actividad minera e industrial, extraen y manufacturan en planta industrial propia, desarrollando el ciclo completo de producción y venta de una completa línea de piedras de afilar de alta calidad al mejor precio.": "Il giacimento di proprietà sfruttato da 82 anni dal suo fondatore è oggi gestito dalla famiglia, che continua fino ad oggi con dedizione esclusiva a questa attività mineraria e industriale, estraendo e fabbricando nella propria impresa, sviluppando l'intero ciclo di produzione e vendita di una linea completa di pietre per affilare di alta qualità al miglior prezzo.",
+        "Planta Industrial": "Stabilimento Industriale",
+        "Se encuentra en Ortiz de Rosas 1227 de San Rafael, Mendoza a 20 cuadras del km 0, cuenta con una superficie de 2.400 m2 en donde se procesa el mineral extraído de la mina LA DIAMANTINA.": "Si trova a Ortiz de Rosas 1227 a San Rafael, Mendoza, a 20 isolati dal km 0, con una superficie di 2.400 m2 dove viene processato il minerale estratto dalla miniera LA DIAMANTINA.",
+        "El mineral es tratado, de acuerdo a su utilidad y destino, con seis tipos de cortadoras de discos diamantados y pulidoras de esmeril para una correcta terminación.": "Il minerale viene trattato, a seconda della sua utilità e destinazione, con sei tipi di taglierine a disco diamantato e lucidatrici a smeriglio per una finitura corretta.",
+        "La empresa cuenta con galpones de almacenamiento y línea de etiquetado, pasando en todas sus etapas de manufactura por estrictos controles de calidad que permiten ofrecer garantía de fabricación al usuario.": "L'azienda dispone di magazzini di stoccaggio e linea di etichettatura, e tutte le fasi di fabbricazione sono sottoposte a rigidi controlli di qualità che garantiscono affidabilità all'utente.",
+        "Fundación de la Empresa": "Fondazione dell'Azienda",
+        "Historia": "Storia",
+        "LA DIAMANTINA fue fundada en 1942 por José Pérez, quien visionó la posibilidad de extraer y manufacturar piedras de afilar de alta calidad. Desde sus inicios, la empresa se ha enfocado en la innovación y en mantener altos estándares de calidad en sus productos. Con el pasar de los años, la empresa ha sido liderada por su familia, continuando con el legado de dedicación y compromiso que estableció su fundador.": "LA DIAMANTINA è stata fondata nel 1942 da José Pérez, che ha intravisto la possibilità di estrarre e fabbricare pietre per affilare di alta qualità. Fin dai suoi inizi, l'azienda si è concentrata sull'innovazione e sul mantenimento di elevati standard di qualità nei suoi prodotti. Nel corso degli anni, l'azienda è stata guidata dalla sua famiglia, continuando l'eredità di dedizione e impegno stabilita dal suo fondatore.",
+        "Visita nuestra sección de productos para ver la variedad que ofrecemos.": "Visita la nostra sezione prodotti per vedere la varietà che offriamo.",
+      
       
       // Añade aquí el resto de las traducciones
     }
@@ -188,11 +230,24 @@ const resources = {
         "WhatsApp": "WhatsApp",
         "Todos los derechos reservados.": "Alle Rechte vorbehalten.",
         "Comentarios de Clientes": "Kundenbewertungen",
-      "LA MINA": "DIE MINEN",
-      "La mina La Diamantina es una de las concesiónes mineras de piedras de afilar argentina otorgada por la Dirección General de Minería de la Nación": "Die La Diamantina Mine ist eine der Bergbaukonzessionen für Schleifsteine, die von der Generaldirektion für Bergbau der Nation vergeben wurde.",
-      "Se encuentra a 120 Km de la ciudad de San Rafael Mendoza Argentina, en el distrito minero Nº 11, con una superficie de 18 Has": "Sie befindet sich 120 km von der Stadt San Rafael Mendoza, Argentinien, im Bergbaugebiet Nr. 11, mit einer Fläche von 18 Hektar.",
-      "Título de propiedad de Fojas 120 y 121, todo ello referido al expediente 4P-81, certificados Nº 60936 de Dirección General de Minería de la Nación": "Eigentumstitel von Seiten 120 und 121, alles im Zusammenhang mit der Akte 4P-81, Zertifikat Nr. 60936 der Generaldirektion für Bergbau der Nation.",
-      "Certificado de mensura y posesiones, al asiento 876, Folio 98 del Tomo 8 del registro de mensuras y posesiones": "Vermessungs- und Besitzbescheinigung, für den Sitz 876, Blatt 98 des Bandes 8 des Vermessungs- und Besitzregisters."
+      "LA MINA": "LA MINIERA",
+      "La mina La Diamantina es una de las concesiónes mineras de piedras de afilar argentina otorgada por la Dirección General de Minería de la Nación.": "Die La Diamantina Mine ist eine der Bergbaukonzessionen für Schleifsteine, die von der Generaldirektion für Bergbau der Nation vergeben wurde.",
+      "Se encuentra a 120 Km de la ciudad de San Rafael Mendoza Argentina, en el distrito minero Nº 11, con una superficie de 18 Has.": "Sie befindet sich 120 km von der Stadt San Rafael Mendoza, Argentinien, im Bergbaugebiet Nr. 11, mit einer Fläche von 18 Hektar.",
+      "Título de propiedad de Fojas 120 y 121, todo ello referido al expediente 4P-81, certificados Nº 60936 de Dirección General de Minería de la Nación.": "Eigentumstitel von Seiten 120 und 121, alles im Zusammenhang mit der Akte 4P-81, Zertifikat Nr. 60936 der Generaldirektion für Bergbau der Nation.",
+      "Certificado de mensura y posesiones, al asiento 876, Folio 98 del Tomo 8 del registro de mensuras y posesiones.": "Vermessungs- und Besitzbescheinigung, für den Sitz 876, Blatt 98 des Bandes 8 des Vermessungs- und Besitzregisters.",
+        "LA EMPRESA": "DAS UNTERNEHMEN",
+        "LA DIAMANTINA es una empresa familiar fundada por José Pérez y continuada por sus herederos, Miguel A. Pérez y Elbio Ramiro Pérez (Hijo y nieto de don José).": "LA DIAMANTINA ist ein Familienunternehmen, das von José Pérez gegründet und von seinen Erben, Miguel A. Pérez und Elbio Ramiro Pérez (Sohn und Enkel von Herrn José), weitergeführt wurde.",
+        "El yacimiento propio explotado desde hace 82 años por su fundador es hoy producido por la familia, quien en forma continua hasta estos días y con dedicación exclusiva a esta actividad minera e industrial, extraen y manufacturan en planta industrial propia, desarrollando el ciclo completo de producción y venta de una completa línea de piedras de afilar de alta calidad al mejor precio.": "Die firmeneigene Mine, die seit 82 Jahren von ihrem Gründer betrieben wird, wird heute von der Familie betrieben, die bis heute kontinuierlich und mit ausschließlicher Hingabe an diese Bergbau- und Industrieaktivität in ihrer eigenen Fabrik hochwertige Schleifsteine produziert und verkauft.",
+        "Planta Industrial": "Industrieanlage",
+        "Se encuentra en Ortiz de Rosas 1227 de San Rafael, Mendoza a 20 cuadras del km 0, cuenta con una superficie de 2.400 m2 en donde se procesa el mineral extraído de la mina LA DIAMANTINA.": "Es befindet sich in der Ortiz de Rosas 1227 in San Rafael, Mendoza, 20 Blocks vom km 0 entfernt, und umfasst eine Fläche von 2.400 m2, in der das aus der LA DIAMANTINA-Mine gewonnene Mineral verarbeitet wird.",
+        "El mineral es tratado, de acuerdo a su utilidad y destino, con seis tipos de cortadoras de discos diamantados y pulidoras de esmeril para una correcta terminación.": "Das Mineral wird je nach Verwendungszweck mit sechs verschiedenen Diamantscheibenschneidern und Schleifpoliermaschinen für eine perfekte Verarbeitung behandelt.",
+        "La empresa cuenta con galpones de almacenamiento y línea de etiquetado, pasando en todas sus etapas de manufactura por estrictos controles de calidad que permiten ofrecer garantía de fabricación al usuario.": "Das Unternehmen verfügt über Lagerhallen und eine Etikettierungslinie, und alle Produktionsstufen unterliegen strengen Qualitätskontrollen, die eine Herstellergarantie für den Benutzer bieten.",
+        "Fundación de la Empresa": "Gründung des Unternehmens",
+        "Historia": "Geschichte",
+        "LA DIAMANTINA fue fundada en 1942 por José Pérez, quien visionó la posibilidad de extraer y manufacturar piedras de afilar de alta calidad. Desde sus inicios, la empresa se ha enfocado en la innovación y en mantener altos estándares de calidad en sus productos. Con el pasar de los años, la empresa ha sido liderada por su familia, continuando con el legado de dedicación y compromiso que estableció su fundador.": "LA DIAMANTINA wurde 1942 von José Pérez gegründet, der die Möglichkeit sah, hochwertige Schleifsteine zu gewinnen und herzustellen. Seit ihren Anfängen hat sich die Firma auf Innovation und die Einhaltung hoher Qualitätsstandards konzentriert. Im Laufe der Jahre wurde das Unternehmen von seiner Familie geführt, die das Erbe von Engagement und Hingabe fortsetzt, das sein Gründer etabliert hat.",
+        "Visita nuestra sección de productos para ver la variedad que ofrecemos.": "Besuchen Sie unseren Produktbereich, um die Vielfalt zu sehen, die wir anbieten.",
+      
+    
 
 
       

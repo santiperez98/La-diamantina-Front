@@ -88,6 +88,18 @@ const Navbar = () => {
         <Link to="/mina" className="block px-2 py-1 hover:bg-gray-700 rounded">{t('La mina')}</Link>
         <Link to="/empresa" className="block px-2 py-1 hover:bg-gray-700 rounded">{t('La empresa')}</Link>
         <Link to="/contacto" className="block px-2 py-1 hover:bg-gray-700 rounded">{t('Contacto')}</Link>
+        
+        {/* Selector de idiomas dentro del menú hamburguesa */}
+        <div className="flex items-center mt-2">
+          <img src={getFlag()} alt="Flag" className="h-6 w-6 mr-2" />
+          <select onChange={(e) => changeLanguage(e.target.value)} className="border p-1 rounded">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="pt">Português</option>
+            <option value="it">Italiano</option>
+            <option value="de">Deutsch</option>
+          </select>
+        </div>
       </div>
     </nav>
   );
